@@ -4,46 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products</title>
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <title>Food Paradise</title>
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- jQuery and jQuery Mobile JS -->
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
-    <div class="page">
-        <div data-role="header" data-theme="b">
-            <h1>Brand Bucket</h1>
-        </div>
-        <div data-role="navbar">
-            <ul>
-                <li><a href="index.html" class="ui-btn-active">Home</a></li>
-                <li><a href="about_us.html" class="ui-btn-active">About Us</a></li>
-                <li><a href="product.html" class="ui-btn-active">Product</a></li>
-                <li><a href="login_Registered.html" class="ui-btn-active">Login/Register</a></li>
-            </ul>
+    <!-- Page wrapper with jQuery Mobile data-role -->
+    <div data-role="page" id="home" data-theme="a">
+        <!-- Hero section with image -->
+        <div class="hero">
+            <img src="background.avif" alt="" class="hero-image">
+
+
+            <div class="navbar-container"> <!-- Container for positioning -->
+                <div data-role="navbar" class="navbar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about" data-transition="slide">About Us</a></li>
+                        <li><a href="#menu" data-transition="slide">Menu</a></li>
+                        <li><a href="#contact" data-transition="slide">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Hero text -->
+            <div class="hero-text">
+                <h2>Welcome to Food Paradise</h2>
+                <p>Your ultimate destination for delightful meals</p>
+            </div>
         </div>
 
-        <div class="content">
-            <!-- Add background color to the container -->
-            <div class="image-container">
-                <div class="rows">
-                    <img src="download.jpeg" alt="" class="styled-image" />
-                    <img src="2.jpeg" alt="" class="styled-image" />
-                    <img src="3.jpeg" alt="" class="styled-image" />
+        <!-- Content section after the hero -->
+        <div data-role="content" class="content">
+            <h2>Our Specialties</h2>
+            <div class="image-grid">
+                <div class="row">
+                    <div class="image-box">
+                        <img src="pizza.avif" alt="Pizza" class="styled-image">
+                        <p>Delicious Pizza</p>
+                        <button data-role="bu">order now</button>
+                    </div>
+                    <div class="image-box">
+                        <img src="pulav.avif" alt="Sushi" class="styled-image">
+                        <p>Fresh Pulav</p>
+                        <button data-role="bu">order now</button>
+
+                    </div>
+                    <div class="image-box">
+                        <img src="food3.jpg" alt="Burger" class="styled-image">
+                        <p>Juicy Burger</p>
+                        <button data-role="bu" class="button">order now</button>
+                    </div>
                 </div>
 
-                <div class="rows">
-                    <img src="4.jpeg" alt="" class="styled-image" />
-                    <img src="5.jpeg" alt="" class="styled-image" />
-                    <img src="6.jpeg" alt="" class="styled-image" />
-                </div>
-
-                <div class="rows">
-                    <img src="7.jpeg" alt="" class="styled-image" />
-                    <img src="2.jpeg" alt="" class="styled-image" />
-                    <img src="3.jpeg" alt="" class="styled-image" />
+                <div class="row">
+                    <div class="image-box">
+                        <img src="sandwith.jpg" alt="Salad" class="styled-image">
+                        <p>Healthy Sandwith</p>
+                        <button data-role="bu" class="button">order now</button>
+                    </div>
+                    <div class="image-box">
+                        <img src="pasta.jpg" alt="Pasta" class="styled-image">
+                        <p>Classic Pasta</p>
+                        <button data-role="bu" class="button">order now</button>
+                    </div>
+                    <div class="image-box">
+                        <img src="food3.jpg" alt="Ice Cream" class="styled-image">
+                        <p>Delicious Ice Cream</p>
+                        <button data-role="bu" class="button">order now</button>
+                    </div>
                 </div>
             </div>
         </div>

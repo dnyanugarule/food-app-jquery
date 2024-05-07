@@ -1,106 +1,107 @@
-/* General page styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
+/* Custom styles for Food Paradise */
 
-/* Header styling */
-[data-role="header"] {
-    background-color: #F4C2C2;
-    color: #0e0101;
-    text-align: center;
-    padding: 10px;
-    border-bottom: 2px solid #00792c;
-}
-
-/* Navigation bar styling */
-[data-role="navbar"] {
-    background-color: #e0e0e0;
-    border-bottom: 1px solid #bdbdbd;
-    padding: 10px 0;
-}
-
-[data-role="navbar"] ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* Hero section with full-sized background image */
+.hero {
+    position: relative;
+    /* Relative to allow absolute positioning within */
+    height: 100vh;
+    /* Full viewport height */
     text-align: center;
 }
 
-[data-role="navbar"] li {
-    display: inline-block;
-    margin: 0 10px;
+/* Hero image adjustment */
+.hero-image {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    /* Cover the entire section */
 }
 
-[data-role="navbar"] a {
-    text-decoration: none;
-    color: #333;
+/* Navbar positioned on top of the hero image */
+.navbar {
+    position: absolute;
+    /* Absolute positioning to overlay on the image */
+    top: 0;
+    /* Position at the top */
+    left: 0;
+    /* Full width */
+    width: 100%;
+    /* Full width */
     padding: 10px;
-    border-radius: 5px;
+
+    /* Padding for usability
+
 }
 
-[data-role="navbar"] a.ui-btn-active {
-    background-color: #009688;
-    color: #ffffff;
-}
+/* Hero text adjustment */
+    .hero-text {
+        position: absolute;
+        /* Absolute positioning */
+        top: 50%;
+        /* Center vertically */
+        left: 50%;
+        /* Center horizontally */
+        transform: translate(-50%, -50%);
+        /* Center the text */
+        z-index: 2;
+        /* Ensure text is above the image */
+        color: white;
+        /* White text for contrast */
+        text-align: center;
+        /* Center the text */
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        /* Text shadow for visibility */
+    }
 
-/* Content styling */
-.content {
-    padding: 20px;
-}
+    /* Content section */
+    .content {
+        padding: 20px;
+        /* Padding for the section */
+        background-color: #3c0303;
+        /* Light gray background */
+    }
 
-/* Centering and organizing product images */
-.rows {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
+    /* Image grid */
+    .image-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        /* Spacing between rows */
+        padding: 20px;
+        /* Padding for the content section */
+    }
 
-.rows img {
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
+    .row {
+        display: flex;
+        justify-content: space-around;
+        /* Space between images */
+        gap: 20px;
+        /* Additional spacing */
+    }
 
-.rows img:hover {
-    transform: scale(1.05);
-}
+    .image-box {
+        text-align: center;
+        /* Centered text */
+    }
 
-/* Title styling */
-h1,
-h3 {
-    margin: 10px;
-}
+    .styled-image {
+        width: 400px;
+        /* Image size */
+        height: 400px;
+        /* Image size */
+        border-radius: 10px;
+        /* Rounded corners */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        /* Slight shadow */
+    }
 
-h3 {
-    color: #333;
-    background: #0bbce0;
-}
-
-/* Background color and padding for the container */
-.image-container {
-    background-color: #f0f0f0;
-    /* light gray background */
-    padding: 20px;
-    /* spacing between the container edge and images */
-}
-
-/* Styling for individual images */
-.styled-image {
-    border: 2px solid #ccc;
-    /* optional border */
-    border-radius: 10px;
-    /* optional rounded corners */
-    margin: 10px;
-    /* space between images */
-    transition: transform 0.3s;
-    /* hover effect */
-}
-
-.styled-image:hover {
-    transform: scale(1.05);
-    /* slight zoom effect on hover */
-}
+    .image-box p {
+        margin-top: 10px;
+        /* Spacing from the image */
+        font-size: 18px;
+        /* Larger font */
+        color: #ecb5b5;
+        /* Dark text color */
+    }
